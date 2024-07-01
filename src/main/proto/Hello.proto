@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package com.example.service.proto;
+package com.example.service;
 
-option java_package = "com.example.service";
+option java_package = "com.example.service.proto";
 option java_multiple_files = true;
 option java_outer_classname = "SimpleServiceProto"; // Added this line
 
