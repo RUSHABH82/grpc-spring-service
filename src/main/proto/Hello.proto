@@ -17,7 +17,17 @@ message HelloResponse {
 message Empty{
 }
 
+enum ActionType{
+  START = 0;
+  STOP = 1;
+}
+
+message Action{
+  ActionType type = 1;
+}
+
 service Simple {
   rpc SayHello (HelloRequest) returns (HelloResponse);
   rpc GenerateData (Empty) returns (stream HelloResponse);
+  rpc CreateAction (stream Action) returns (stream HelloResponse);
 }
